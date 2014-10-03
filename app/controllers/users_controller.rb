@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @friends = @user.facebook.get_connections("me", "friends")
   end
 
 end

@@ -1,0 +1,37 @@
+<h3> Incoming: Upcoming! (rsvp='attending')</h3>
+  <% @goings.each do |event| %>
+  <div class="panel">
+    <div class="panel-heading">
+      <strong><%= event['name'] %>: </strong>
+    </div>
+    <div class="panel-body">
+      <p><strong>@</strong> <%= event['start_time'] %></p>
+      <p><strong>@</strong> <%= event['location'] %></p>
+    </div>
+  </div>
+  <% end %>
+<h3> Don't wanna go? (rsvp='not attending')</h3>
+  <% @not_goings.each do |event| %>
+  <div class="panel">
+    <div class="panel-heading">
+      <strong><%= event['name'] %>: </strong>
+    </div>
+    <div class="panel-body">
+      <p><strong>@</strong> <%= event['start_time'] %></p>
+      <p><strong>@</strong> <%= event['location'] %></p>
+    </div>
+  </div>
+  <% end %>
+<h3> Maybe!? (rsvp='maybe')</h3>
+  <% @maybes.each do |event| %>
+  <div class="panel">
+    <div class="panel-heading">
+      <strong><%= event['name'] %>: </strong>
+    </div>
+    <div class="panel-body">
+      <p><strong>@</strong> <%= event['start_time'] %></p>
+      <p><strong>@</strong> <%= event['location'] %></p>
+    </div>
+  </div>
+  <% end %>
+
